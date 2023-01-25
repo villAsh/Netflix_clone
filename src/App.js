@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+// import { useEffect } from 'react';
 import './App.css';
-
+import Navbar from './Components/Navbar';
+import Uncharted from './Components/Uncharted';
+import poster from './images/uncharted.jpg';
 function App() {
+ const bg_img = {
+  backgroundImage : `url(${poster})`,
+  backgroundPosition: 'center',
+  backgroundSize : 'cover',
+  boxShadow: '0 0 85px 20px black inset'
+ }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App h-[100vh] bg-slate-400" style={bg_img}>
+      <Navbar />
+       <Uncharted />
     </div>
   );
 }
