@@ -9,19 +9,25 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Shows from './Pages/Shows';
 import Movies from './Pages/Movies';
 import SingleContent from './Pages/SingleContent';
+import MediaContext from './TypeContext';
+import { useState } from 'react';
 function App() {
-
+  const [type, setType] = useState({});
+  console.log("Type...",type)
   return (
     <Router>
       <div className="App">
         <Navbar />
-        </div>
+      </div>
+      <MediaContext.Provider value={{type,setType}}>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='trending/:id' element={<SingleContent />} />
         <Route path='shows' element={<Shows />} />
         <Route path='movies' element={<Movies />} />
       </Routes>
+      </MediaContext.Provider>
+   
       
     </Router>
 
