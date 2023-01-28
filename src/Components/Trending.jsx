@@ -21,7 +21,7 @@ function Trending() {
         <div className="pt-10 bg-slate-900">
             <h1 className="text-[#E50914] text-4xl font-bold md:ml-7">Trending Now</h1>
             <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 place-content-center">
-                {trends && trends.map((data) => <TrendCard poster={data?.poster_path} title={data?.title || data?.name} key={data?.id} id={data?.id} media_type={data?.media_type} />)}
+                {trends && trends.map((data) => <TrendCard poster={data?.poster_path} title={data?.title || data?.name} key={data?.id} id={data?.id} media_type={data?.media_type} link_path="trending" />)}
             </div>
         </div>
     );
