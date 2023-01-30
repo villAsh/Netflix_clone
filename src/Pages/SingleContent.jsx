@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState,useEffect,useContext,memo } from "react";
 import MediaContext from "../TypeContext";
-import APP_API from "../api";
+import {APP_API, unavailable} from "../config";
 
 function SingleContent() {
     //TO USE MEDIA_TYPE FOR SPECIFIC TV/MOVIE
@@ -24,7 +24,7 @@ function SingleContent() {
     },[type.id,type.media]);
     return (
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-evenly h-[87vh]">
-            <img src={`${img_500}/${Data?.poster_path}`}
+            <img src={Data.poster_path ? `${img_500}/${Data?.poster_path}` : unavailable}
                 className="md:h-[80vh]"
                 alt="movie poster" />
             <div className="space-y-3 ml-10">

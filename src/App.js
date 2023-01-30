@@ -15,7 +15,7 @@ import poster from './images/bghero.jpg';
 import Hero from "./Components/Hero";
 function App() {
   const [type, setType] = useState({});
-  console.log("Type...",type)
+  // console.log("Type...",type)
   const bg_img = {
     backgroundImage: `url(${poster})`,
     backgroundPosition: 'center',

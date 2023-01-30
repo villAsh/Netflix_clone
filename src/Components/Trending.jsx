@@ -1,7 +1,7 @@
 import axios from "axios";
 import TrendCard from "./TrendCard";
 import { useEffect, useState } from "react";
-import APP_API from "../api";
+import {APP_API} from "../config";
 function Trending() {
 
     const [trends, setTrends] = useState([]);

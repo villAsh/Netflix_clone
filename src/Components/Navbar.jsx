@@ -8,7 +8,7 @@ function Navbar() {
                 <Link to="/">
                 <img src={logo} alt="logo" width={120} className="mr-10" />
                 </Link>
-                <ul className='hidden md:flex space-x-4  list-none font-semibold  text-xl font-serif text-white cursor-pointer'>
+                <ul className='flex space-x-4  list-none font-semibold text-base  md:text-xl font-serif text-white cursor-pointer'>
                     <li className='hover:animate-pulse hover:text-red-700'><Link to="/">Home</Link></li>
                     <li className='hover:animate-pulse hover:text-red-700'><Link to="shows">Tv Shows</Link></li>
                     <li className='hover:animate-pulse hover:text-red-700'><Link to="movies">Movies</Link></li>

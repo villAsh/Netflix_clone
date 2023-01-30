@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useContext, memo, useState } from "react";
 import { AiFillHeart } from 'react-icons/ai'
 import MediaContext from "../TypeContext";
+import { unavailable } from "../config";
 
 function TrendCard({ poster, title, id, media_type, link_path }) {
     const { type, setType } = useContext(MediaContext)
@@ -26,7 +27,7 @@ function TrendCard({ poster, title, id, media_type, link_path }) {
                 <button className="absolute text-white" onClick={(e) => AddFav(e)}>
                     <AiFillHeart  style={{fill : like ? "#E50914" : "white",fontSize : '2rem'}}/>
                 </button>
-                <img src={`${img_500}/${poster}`} alt={title} />
+                <img src={poster ? `${img_500}/${poster}` : unavailable} alt={title} />
                 <h1 className="text-xl font-bold text-[#E50914]">{title}</h1>
 
             </div>
