@@ -1,3 +1,5 @@
+//NAVBAR WHICH IS COMMON IN EVERY PAGE.
+
 import logo from '../images/Netflix.svg';
 // import {AiOutlineSearch} from 'react-icons/ai';
 import { Link } from 'react-router-dom';

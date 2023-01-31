@@ -30,7 +30,7 @@ function SingleContent() {
             <div className="space-y-3 ml-10">
                 <h1 className="md:text-5xl font-bold">{Data?.title || Data?.name}</h1>
                 <h3 className="text-2xl text-justify">{Data?.release_date}</h3>
-                <h5 className="text-xl text-black font-bold">{Data?.runtime ? "Mintues" : ""}</h5>
+                <h5 className="text-xl text-black font-bold">{Data.runtime ? Data.runtime + " Minutes": "" } </h5>
                 <hr />
                 <h3 className="text-2xl text-center text-black font-serif font-bold">{Data?.tagline}</h3>
                 <p className="text-lg font-semibold font-sans">{Data?.overview}</p>

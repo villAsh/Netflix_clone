@@ -2,11 +2,12 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import TrendCard from '../Components/TrendCard';
 import { AiOutlineSearch } from 'react-icons/ai';
-import { APP_API, unavailable } from '../config';
+import { APP_API} from '../config';
 function Movies() {
     const [movies, setMovies] = useState([]);
     const [search, setSearch] = useState('');
-
+    
+    //FETCHING MOVIE DATA.
     useEffect(() => {
         const fetchMovies = async () => {
             const { data } = await axios

@@ -2,10 +2,12 @@ import axios from "axios";
 import TrendCard from "./TrendCard";
 import { useEffect, useState } from "react";
 import {APP_API} from "../config";
+
+//TRENDING SECTION UI.
 function Trending() {
 
     const [trends, setTrends] = useState([]);
-
+    //FETCHING THE TRENDING MOVIES AND SHOWS DATA.
     useEffect(() => {
         const fetchTrend = async () => {
             const { data } = await axios

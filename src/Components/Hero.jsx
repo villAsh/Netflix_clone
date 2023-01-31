@@ -1,4 +1,4 @@
-
+//HERO COMPONENT WHICH IS COMMON IN EVERY PAGE.
 function Hero(){
  
     return(

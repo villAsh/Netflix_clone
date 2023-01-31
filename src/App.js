@@ -1,9 +1,6 @@
-// import { useEffect } from 'react';
-import './App.css';
-// import Hero from './Components/Hero';
-import Navbar from './Components/Navbar';
-// import Trending from './Components/Trending';
 
+import './App.css';
+import Navbar from './Components/Navbar';
 import Home from './Pages/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Shows from './Pages/Shows';
