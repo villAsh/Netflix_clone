@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AiFillHeart } from 'react-icons/ai'
 import MediaContext from "../TypeContext";
 import { unavailable } from "../config";
@@ -24,17 +24,26 @@ function TrendCard({ poster, title, id, media_type, link_path }) {
         console.log(_type)
     }
 
+    const timed = setTimeout(() => {
+        setLike(false)
+    },2000)
     //FUNCTION FOR LIKE.
-    const AddFav = (e) => {
+    const AddFav = (e,id) => {
         e.preventDefault();
-        setLike(!like)
+        setLike(true)
+        console.log("liked id...",id)
     }
+
+    useEffect(() => {
+        return clearTimeout(timed);
+    },[])
+
     return (
         <Link to={`${link_path}/${id}`} onClick={() => getMedia(media_type)}>
 
             <div className="mx-5 p-5 flex flex-col items-end  hover:bg-gray-700 hover:cursor-pointer">
-                <button className="absolute text-white" onClick={(e) => AddFav(e)}>
-                    <AiFillHeart  style={{fill : like ? "#E50914" : "white",fontSize : '2rem'}}/>
+                <button className="absolute text-white" onClick={(e) => AddFav(e,id)}>
+                    <AiFillHeart  style={{fill : like ? "#E50914" : "white", fontSize : '3rem'}}/>
                 </button>
                 <img src={poster ? `${img_500}/${poster}` : unavailable} alt={title} />
                 <h1 className="text-xl font-bold text-[#E50914]">{title}</h1>

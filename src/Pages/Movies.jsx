@@ -29,7 +29,7 @@ function Movies() {
     const searchMovies = async () => {
         const { data } = await axios
         .get(`https://api.themoviedb.org/3/search/movie?api_key=${APP_API}&
-        language=en-US&query=${search}&page=1&include_adult=false`);
+        language=en-US&query=${search ? search : 'a'}&page=1&include_adult=false`);
         console.log(data.results);
         setMovies(data.results)
     }

@@ -25,7 +25,7 @@ function Shows() {
     const searchShows = async () => {
         const { data } = await axios
             .get(`https://api.themoviedb.org/3/search/tv?api_key=${APP_API}&
-            language=en-US&page=1&query=${search}&include_adult=false
+            language=en-US&page=1&query=${search ? search : 'friends'}&include_adult=false
         `);
         // console.log(data.results);
         
