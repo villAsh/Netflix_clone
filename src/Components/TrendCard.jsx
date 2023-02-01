@@ -34,9 +34,6 @@ function TrendCard({ poster, title, id, media_type, link_path }) {
         console.log("liked id...",id)
     }
 
-    useEffect(() => {
-        return clearTimeout(timed);
-    },[])
 
     return (
         <Link to={`${link_path}/${id}`} onClick={() => getMedia(media_type)}>
